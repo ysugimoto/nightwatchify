@@ -65,9 +65,13 @@ class SaucelabsReporter {
 module.exports = nightwatchify.Command(SaucelabsReporter);
 ```
 
+The wrapped class extends `EventEmitter` automatically, so you can use `this.emit('complete')` without any extends.
+
+__Note__: context of `command()` method is wrapped class, not `SaucelabsReporter`. If you want to access `SaucelabsReporter` instance itself, you can access it via `this.cmd` property.
+
 ### nightwatchify.Bdd()
 
-Wrap BDD fglobal functions to ES5
+Wrap BDD global functions to ES5
 
 ```js
 const nightwatchify = require('nightwatchify');
