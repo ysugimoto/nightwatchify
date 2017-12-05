@@ -50,7 +50,7 @@ class SaucelabsReporter {
       });
       const test = this.api.currentTest;
       s.updateJob(session.sessionId, {
-        passed: test.failed > 0,
+        passed: test.failed === 0,
         name: `${test.name}: ${test.module}`
       }, () => {
         this.emit('complete');
