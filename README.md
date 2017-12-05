@@ -9,7 +9,9 @@
 Wrap nightwatch's testcases to ES5 testcase object
 
 ```js
-module.exports = {
+const nightwatchify = require('nightwatchify');
+
+module.exports = nightwatchify({
 
   '@tags': ['example'],
 
@@ -22,7 +24,7 @@ module.exports = {
   afterEach(client, done) {
     // do something
   }
-};
+});
 ```
 
 ### nightwatchify.Command
