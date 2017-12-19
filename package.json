@@ -1,6 +1,6 @@
 {
   "name": "nightwatchify",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Write and run as Es6 syntax for nightwatch",
   "main": "index.js",
   "directories": {
